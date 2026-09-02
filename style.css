@@ -1,93 +1,78 @@
-* {
-    box-sizing: border-box;
+*{
+box-sizing: border-box;
 }
-
-body {
-    margin: 0;
-    padding: 30px;
-    font-family: Arial, sans-serif;
-    background: #f2f4f7;
+body{
+margin: 0;
+padding: 30px;
+font-family: Arial, sans-serif;
+background: #f2f4f7;
 }
-
-h1 {
-    text-align: center;
-    margin-bottom: 30px;
+h1{
+text-align: center;
+margin-bottom: 30px;
 }
-
+.card-container{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+max-width: 1000px;
+margin: auto;
+}
+.card{
+background: white;
+border: 1px solid #ddd;
+border-radius: 12px;
+padding: 20px;
+position: relative;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+display: flex;
+align-items: center;
+gap: 15px;
+}
+.card img{
+ width: 100px;
+ height: 100px;
+border-radius: 50%;
+}
+.card-content{
+ display: flex;
+flex-direction: column;
+gap: 5px;
+}
+.card-content h2{
+margin: 0;
+}
+.card-content p{
+ margin: 0;
+color: #555;
+}
+button{
+margin-top: 8px;
+padding: 8px 12px;
+border: none;
+border-radius: 6px;
+background: #333;
+color: white;
+cursor: pointer;
+}
+.badge{
+position: absolute;
+top: 10px;
+right: 10px;
+background: green;
+color: white;
+padding: 5px 8px;
+border-radius: 10px;
+font-size: 11px;
+}
+.new{
+background: orange;
+}
+@media(max-width: 768px){
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    max-width: 1000px;
-    margin: auto;
+ grid-template-columns: 1fr;
 }
-
-.card {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 20px;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.card{
+width: 100%;
 }
-
-.card img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-
-.card-content {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.card-content h2 {
-    margin: 0;
-}
-
-.card-content p {
-    margin: 0;
-    color: #555;
-}
-
-button {
-    margin-top: 8px;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 6px;
-    background: #333;
-    color: white;
-    cursor: pointer;
-}
-
-.badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: green;
-    color: white;
-    padding: 5px 8px;
-    border-radius: 10px;
-    font-size: 11px;
-}
-
-.new {
-    background: orange;
-}
-
-@media (max-width: 768px) {
-
-    .card-container {
-        grid-template-columns: 1fr;
-    }
-
-    .card {
-        width: 100%;
-    }
 }
